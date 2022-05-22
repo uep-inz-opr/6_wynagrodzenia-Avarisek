@@ -4,7 +4,7 @@ class Pracownik:
     def __init__(self, imie, wynagrodzenie_brutto):
         self.imie=imie
         self.wynagrodzenie_brutto=int(wynagrodzenie_brutto)
-        self.koszt_przychodu=112.25
+        self.koszt_przychodu=111.25
 
     def policz_skladki(self):
         emerytalna=round(self.wynagrodzenie_brutto*0.0976,2)
@@ -22,7 +22,7 @@ class Pracownik:
 
         skladki_pracodawcy=round(emerytalna+x+wypadkowa+chorobowa+fgsp,2)
         koszt_pracodawcy=round(skladki_pracodawcy+self.wynagrodzenie_brutto,2)
-        self.laczny_koszt=round(self.wynagrodzenie_brutto+skladki_pracodawcy,2)
+        self.laczny_koszt=round(float(self.wynagrodzenie_brutto)+skladki_pracodawcy,2)
         #wynagrodzenie_netto="{:.2f}".format(wynagrodzenie_netto)
         #skladki_pracodawcy="{:.2f}".format(skladki_pracodawcy)
         return(self.imie+ " {:.2f} {:.2f} {:.2f}").format(wynagrodzenie_netto, skladki_pracodawcy, koszt_pracodawcy)
