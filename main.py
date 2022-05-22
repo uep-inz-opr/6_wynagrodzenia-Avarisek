@@ -23,9 +23,9 @@ class Pracownik:
         skladki_pracodawcy=round(emerytalna+x+wypadkowa+chorobowa+fgsp,2)
         koszt_pracodawcy=round(skladki_pracodawcy+self.wynagrodzenie_brutto,2)
         self.laczny_koszt=round(self.wynagrodzenie_brutto+skladki_pracodawcy,2)
-        wynagrodzenie_netto="{:.2f}".format(wynagrodzenie_netto)
-        skladki_pracodawcy="{:.2f}".format(skladki_pracodawcy)
-        return self.imie, wynagrodzenie_netto, skladki_pracodawcy, koszt_pracodawcy
+        #wynagrodzenie_netto="{:.2f}".format(wynagrodzenie_netto)
+        #skladki_pracodawcy="{:.2f}".format(skladki_pracodawcy)
+        return(self.imie+ " {:.2f} {:.2f} {:.2f}").format(wynagrodzenie_netto, skladki_pracodawcy, koszt_pracodawcy)
     def zwroc_laczny_koszt(self):
         return self.laczny_koszt
       
