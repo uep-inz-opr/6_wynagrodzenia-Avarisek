@@ -19,7 +19,7 @@ class Pracownik:
         x=round(self.wynagrodzenie_brutto*0.065,2)
         fgsp=round(self.wynagrodzenie_brutto*0.001,2)
         wypadkowa=round(self.wynagrodzenie_brutto*0.0193,2)
-
+XDDD
         skladki_pracodawcy=round(emerytalna+x+wypadkowa+chorobowa+fgsp,2)
         koszt_pracodawcy=round(skladki_pracodawcy+self.wynagrodzenie_brutto,2)
         self.laczny_koszt=round(self.wynagrodzenie_brutto+skladki_pracodawcy,2)
